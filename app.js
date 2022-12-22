@@ -12,7 +12,7 @@ app.use(express.static(__dirname + '/assets/'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
-  console.log(process.env);
+  console.log(process.env.MAILCHIMP_API_KEY);
   res.sendFile(__dirname + '/signup.html');
 });
 
